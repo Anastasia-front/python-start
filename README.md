@@ -1,2 +1,3 @@
 # python-start
-first steps into Python
+
+![certificate](./images/introduction%20to%20python.png)
