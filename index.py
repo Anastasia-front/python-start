@@ -1,3 +1,10 @@
+
+print('-------------------------------------------------')
+print()
+print('task 1 - `statement of type`')
+print()
+print()
+
 #1 - statement of type
 length = "2.75"
 width = "1.75"
@@ -5,6 +12,13 @@ area =float(length)*float(width)
 show = f"With width {width} and length {length} of the room, its area is equal to {area}"
 
 print(show)
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 2 - `input`')
+print()
 
 #2 - input
 name = str(input("Your name? "))
@@ -20,7 +34,14 @@ result = f'''\
    Your status is - {is_active} 
    '''
 
-print(result)
+# print(result)
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 3 - `lists`')
+print()
 
 #3 - lists
 my_list = [2024, 3.12]
@@ -31,6 +52,12 @@ my_list.reverse()
 
 print(my_list)
 
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 4 - `dictionary`')
+print()
 
 #4 - dictionary
 data ={}
@@ -39,6 +66,13 @@ data['lang']="Python"
 data['version']=3.12
 
 print(data)
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 5 - `dictionary and lists`')
+print()
 
 #5 - dictionary and lists
 cat = {}
@@ -51,6 +85,14 @@ cat.update(info)
 
 print(cat)
 
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 6 - `nested lists and loop for`')
+print()
+
 #6 nested lists and loop for
 countries = [["USA", 9629091, 331002651], ["Canada", 9984670, 37742154],
             ["Germany", 357114, 83783942], ["Brazil", 8515767, 212559417],
@@ -62,6 +104,15 @@ for i in range(len(countries)):
         # Computing population density for a country
         pop_dens = round(countries[i][2]/countries[i][1], 2)
         print(countries[i][0], pop_dens, 'people per km²')
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 7 - `function and if/elif/else`')
+print()
 
 #7 function and if/elif/else
 def is_positive(n):
@@ -76,6 +127,16 @@ print('Number -5 is', is_positive(-5))
 print('Number 0 is', is_positive(0))
 print('Number 5 is', is_positive(5))
 
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 8 - `using of function parameters`')
+print()
+
+
 #8 using of function parameters
 people_d = {'Alex': (23, 178), 'Noah': (34, 189), 'Peter': (29, 175), 'John': (41, 185), 'Michelle': (35, 165)}
 
@@ -87,9 +148,27 @@ def people_information(d, name):
 people_information(people_d, "Alex")
 people_information(people_d, "Michelle")
 
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 9 - `lambda`')
+print()
+
 #9 lambda
 sq = lambda x, y: (x + y)**2
 print('Sum of 2 and 3 squared is', sq(2, 3))
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 10 - `modifying functions`')
+print()
 
 #10 modifying functions
 countries_dict = {'USA': (9629091, 331002651), 'Canada': (9984670, 37742154), 
@@ -107,6 +186,15 @@ def country_information(d, name):
 country_information(countries_dict, 'USA')
 country_information(countries_dict, 'Ukraine')
 
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 11 - `find the word index and get the word`')
+print()
+
 #11 find the word index and get the word
 string = "It can be painful to learn from mistakes"
 
@@ -117,6 +205,15 @@ learn = string[string.index('learn'):string.index('learn') + 5]
 print(painful)
 print(mistakes)
 print(learn)
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 12 - `datetime`')
+print()
 
 #12 datetime
 from datetime import datetime
@@ -135,6 +232,15 @@ else:
     delta = date_2 - date_1
 print("Difference is", delta.days, "days")
 
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 13 - `list comprehensions`')
+print()
+
 #13 list comprehensions
 sentence = "List comprehension in Python is fun and powerful!"
 vowels = 'aeiou'
@@ -144,6 +250,15 @@ capitalized_vowels = [char.upper() for char in sentence if char.lower() in vowel
 
 # Output the list of capitalized vowels
 print(capitalized_vowels)
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 14 - `dictionary comprehensions`')
+print()
 
 #14 dictionary comprehensions
 city_population = {
@@ -162,6 +277,15 @@ filtered_cities = {
 
 print(filtered_cities)
 
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 15 - `delete an item from tuple`')
+print()
+
 #15 delete an item from tuple
 fruits = ('apple', 'apricot', 'banana', 'grape', 'mango', 'peach', 'pineapple')
 
@@ -174,13 +298,22 @@ fruits = tuple(list_fruits)
 
 print(fruits)
 
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 16 - `methods of set`')
+print()
+
 #16 methods of set
 set = {1, 5, 10, 15}
 set.add(150)
 set.update([20,25,100])
 set.remove(10)
-#KeyError
-set.remove(999)
+# will be KeyError
+# set.remove(999)
 set.discard(15)
 #without throwing an error
 set.discard(999)
