@@ -134,3 +134,58 @@ else:
     print("date_2 is greater")
     delta = date_2 - date_1
 print("Difference is", delta.days, "days")
+
+#13 list comprehensions
+sentence = "List comprehension in Python is fun and powerful!"
+vowels = 'aeiou'
+
+# Using list comprehension with a conditional to extract and capitalize vowels
+capitalized_vowels = [char.upper() for char in sentence if char.lower() in vowels]
+
+# Output the list of capitalized vowels
+print(capitalized_vowels)
+
+#14 dictionary comprehensions
+city_population = {
+    'New York': 8419600,
+    'Los Angeles': 3980400,
+    'Chicago': 2716000,
+    'Houston': 2328000,
+    'Phoenix': 1690000,
+    'SmallTown': 15000
+}
+min_population = 5000000
+filtered_cities = {
+    city: population for city, population in 
+  city_population.items() if min_population < population
+}
+
+print(filtered_cities)
+
+#15 delete an item from tuple
+fruits = ('apple', 'apricot', 'banana', 'grape', 'mango', 'peach', 'pineapple')
+
+list_fruits = list(fruits) 
+list_fruits.remove('banana')
+list_fruits.remove('grape')
+list_fruits.remove('peach')
+
+fruits = tuple(list_fruits)
+
+print(fruits)
+
+#16 methods of set
+set = {1, 5, 10, 15}
+set.add(150)
+set.update([20,25,100])
+set.remove(10)
+#KeyError
+set.remove(999)
+set.discard(15)
+#without throwing an error
+set.discard(999)
+
+print(1 in set)
+print(set)
+set.clear()
+print(set)
