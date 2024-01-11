@@ -404,3 +404,293 @@ tesla_x = 120_000
 car_to_buy = 'BMW x5' if amount < tesla_x else 'Tesla X'
 
 print(car_to_buy)
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 21 - `Pass, Else in a for Loop`')
+print()
+
+#21 Pass, Else in a for Loop
+numbers = [17, 7, 8, 11, 8, 5]
+
+for i in numbers:
+  if i > 5:
+    print(i, 'is greater than 5')
+  else:
+    pass
+
+else:
+    print('Done')
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 22 - `Enumerate() in a for Loop`')
+print()
+
+#22 Enumerate() in a for Loop
+numbers = [2, 3, 8, 5, 6, 7, 8, 11, 8]
+counter = 0
+
+for i, v in enumerate(numbers):
+  if v % 3 == 0:
+    print('Numbers[', i, '] =', v, 'is multiple of three')
+    counter +=1
+  else:
+    continue
+    
+print(counter)
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 23 - `If/Else in a while Loop`')
+print()
+
+#23 If/Else in a while Loop
+numbers = [1, -12, 4, -6, -10, 5, -1, -5, 4]
+i = 0
+counter = 1
+
+while i < len(numbers):
+  if numbers[i] < 0:
+    counter *= numbers[i]
+    i += 1
+  else:
+    i += 1
+
+print(counter)
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 24 - `Break/Continue in a while Loop`')
+print()
+
+#24 Break/Continue in a while Loop
+numbers = [2, 3, 4, -11, 5]
+i = -1
+
+while i < len(numbers) -1 :
+  i += 1
+  if numbers[i] < 0:
+    print('Negative number was found!: ', numbers[i])
+    break
+  else:
+    continue
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 25 - `Pass, Else in a while Loop`')
+print()
+
+#25 Pass, Else in a while Loop
+counter = 0
+
+while counter < 10:
+  counter += 1
+  pass
+
+else:
+  print('Done!')
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 26 - `First Nested Loop Pattern`')
+print()
+
+#26 First Nested Loop Pattern
+  # Set outer loop for the number of rows
+for i in range(4, 0, -1):
+  # Set inner loop for the number of elements in the row
+  for j in range(1, i+1):
+    print('*', end=' ')
+  print('')
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 27 - `Nested for Loop`')
+print()
+
+#27 Nested for Loop
+matrix = [ [1, 2, 4, 29],
+           [3, 4, 6, 1] ]
+
+counter = 0
+# Set outer loop to work with the number of rows
+for i in range(len(matrix)):
+  # Inner loop to work with the number of element in the row
+  for j in range(len(matrix[i])):
+    # Implement sum with the help of counter
+    counter += matrix[i][j]
+
+print(counter)
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 28 - `Nested While Loop`')
+print()
+
+#28 Nested While Loop
+matrix = [ [1, 2, 4, 29],
+           [3, 4, 6, 1],
+          [10, -5, 0]]
+
+# Set outer while loop to work with the number of rows
+i = 0
+while i < len(matrix):
+  # Set inner while loop to work with the number of elements in the row
+  j = 0
+  while j < len (matrix[i]):
+    matrix[i][j] += 1
+    print(matrix[i][j], end = ' ')
+    j +=1
+  i += 1
+  print('')
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 29 - `While Loop inside a for Loop`')
+print()
+
+#29 While Loop inside a for Loop
+matrix = [['R', 'i', 'd', 'e', 'r', 's', ' ', 'o', 'n '],
+   ['t', 'h', 'e', ' ', 's', 't', 'o', 'r', 'm']]
+
+# Set for loop to work with rows (i)
+for i in range(len(matrix)):
+  # Set j
+  j = 0
+  # Set while loop to work with elements inside the row
+  while j < len(matrix[i]):
+    print(matrix[i][j], end = ' ')
+    j += 1
+  print('')
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 30 - `If/Else in a Nested Loop`')
+print()
+
+#30 If/Else in a Nested Loop
+text = 'ofsddsfadfjfojnanjinjudfninvjunjee'
+vowels = 'aeiou'
+
+# Set i
+i = 0
+# Set while loop to work with elements of the text
+while i < len(text):
+  # Set for loop to work with the elements of the vowels
+  for j in range(len(vowels)):
+    # If an element in the text is one of the elements in vowels
+    if text[i] == vowels[j]:
+      print(text[i])
+  i += 1
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 31 - `Break/Continue in a Nested Loop`')
+print()
+
+#31 Break/Continue in a Nested Loop
+matrix = [[' L', '#', 'o', 'o', '#', 's', 'i', 'n', 'g', ' ', '#', 'm', 'y '],
+  ['r', 'e', '#', 'l', 'i','#', 'g', 'i', 'o', '#', 'n', '!', 'apspsasd']]
+
+# Set for loop to work with the number of rows 
+for i in range(len(matrix)):
+  # Set for loop to work with the number of elements of the row
+  for j in range(len(matrix[i])):
+    if matrix[i][j] == '#':
+      continue
+    elif matrix[i][j] == '!':
+      break
+    else:
+      print(matrix[i][j], end=' ')
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 32 - `Challenge`')
+print()
+
+#32 Challenge
+text = 'aew$^&hg32yy8wer3$#^*@#7ds983hn'
+vowels = 'aeiou'
+
+text_vowels = ''
+text_consonants = ''
+text_symbols = ''
+
+i = 0
+# Set outer while loop to work with text
+while i < len(text):
+  u = 0
+  # Set condition *if an element is a letter*
+  if text[i].isalpha():
+    # Set inner *while* loop to work with vowels
+    while u < len(vowels):
+      # Set condition *if a letter from the text is in the vowels* 
+      if text[i] == vowels[u]:
+        # Add the letter to the text_vowels
+        text_vowels += text[i]
+        break
+      u += 1
+    else:
+      # Add the letter to the text_consonants
+      text_consonants += text[i]
+  else:
+    # Add the letter to the text_symbols
+    text_symbols += text[i]
+  i += 1
+  
+print('Vowels from the text: ', text_vowels)
+print('Consonants from the text: ', text_consonants)
+print('Symbols from the text: ', text_symbols)
