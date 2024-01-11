@@ -322,3 +322,85 @@ print(1 in set)
 print(set)
 set.clear()
 print(set)
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 17 - `logical operators`')
+print()
+
+#17 logical operators
+def leap_year(year):
+    if year % 4  == 0 and (year % 100 != 0 or year % 400 == 0):
+        return 'Leap year'
+    else:
+        return 'Not a leap year'
+
+print(leap_year(2024))
+print(leap_year(2014))
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 18 - `Rock, Paper and Scissors`')
+print()
+
+#18 Rock, Paper and Scissors
+player_1 = 'scissors'
+player_2 = 'paper'
+
+def game(player_1, player_2):
+	if player_1 == player_2:
+		return("It's a draw!")
+	if (player_1 == 'rock' and player_2 == 'scissors') or (player_1 == 'scissors' and player_2 == 'paper') or (player_1 == 'paper' and player_2 == 'rock'):
+		return("Player 1 wins!")
+	else:
+		return("Player 2 wins!")
+
+print(game(player_1, player_2))
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 19 - `Car Brands`')
+print()
+
+#19 Car Brands
+cars = ['mazda', 'lexus', 'bmw', 'tesla', 'kia']
+new_list = []
+
+for car in cars:
+    if car == 'bmw':
+        new_list.append(car.upper())
+    elif car == 'kia':
+        new_list.append(car.upper())
+    else:
+        new_list.append(car.title())
+print(new_list)
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 20 - `Conditional Expression`')
+print()
+
+#20 Conditional Expression
+amount = 95_000
+bmw_x5 = 80_000
+tesla_x = 120_000
+
+car_to_buy = 'BMW x5' if amount < tesla_x else 'Tesla X'
+
+print(car_to_buy)
