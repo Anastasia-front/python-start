@@ -1,4 +1,7 @@
-
+print()
+print()
+print('-------------------------------------------------')
+print('NEW OUTPUT')
 print('-------------------------------------------------')
 print()
 print('task 1 - `statement of type`')
@@ -694,3 +697,7 @@ while i < len(text):
 print('Vowels from the text: ', text_vowels)
 print('Consonants from the text: ', text_consonants)
 print('Symbols from the text: ', text_symbols)
+print()
+print()
+print('-------------------------------------------------')
+print()
