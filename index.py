@@ -697,7 +697,353 @@ while i < len(text):
 print('Vowels from the text: ', text_vowels)
 print('Consonants from the text: ', text_consonants)
 print('Symbols from the text: ', text_symbols)
+
+
 print()
 print()
 print('-------------------------------------------------')
+print()
+print('task 33 - `Build-in functions`')
+print()
+
+#33 Build-in functions
+def calculate_interest(principal, rate, years):
+    # Check the types of inputs: check if the type of input belongs to values in tuple
+    if type(principal) not in (int, float):
+        print('Principal amount must be a number.')
+        return 0
+    
+    if type(rate) not in (int, float):
+        print('Interest rate must be a number.')
+        return 0
+    
+    if type(years) is not int:
+        print('Number of years must be an integer.')
+        return 0
+    
+    # Calculate the compound interest using built-in functions
+    amount = principal * (1 + rate/100) ** years
+    interest = amount - principal
+    
+    # Round the interest to two decimal places using the built-in round() function
+    interest = round(interest, 2)
+    
+    # Return the calculated interest
+    return interest
+
+
+print(calculate_interest(2000, '5', 3))
+print(calculate_interest(2000, 5, 3))
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 34 - `Optional Arguments`')
+print()
+
+#34 Optional Arguments
+def calculate_total_cost(price, quantity, discount=0, tax_rate=0.1):
+
+    discounted_price = price - (price * discount)
+    subtotal = discounted_price * quantity
+    total_cost = subtotal + (subtotal * tax_rate)
+    return total_cost
+  
+# Calculate the total cost without discount and with a tax rate of 0.15
+cost1 = calculate_total_cost(10, 5, tax_rate=0.15)
+print(f'The first cost is {cost1}')
+
+# Calculate the total cost with a 20% discount and the default tax rate
+cost2 = calculate_total_cost(10, 5, discount=0.2)
+print(f'The second cost is {cost2}') 
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 35 - `Arbitrary Arguments`')
+print()
+
+#35 Arbitrary Arguments
+def calculate_average(*args):
+  len_args = len(args)
+  if len_args == 0:
+     return 0
+  total = sum(args)
+  average = total / len_args
+  return average
+
+# Example usage
+print(calculate_average(10, 20, 30, 40, 50))
+print(calculate_average(5))
+print(calculate_average())
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 36 - `Arbitrary Keyword Arguments`')
+print()
+
+#36 Arbitrary Keyword Arguments
+def organize_books_on_shelf(**kwargs):
+    # An empty dictionary to represent the bookshelf
+    bookshelf = {}
+    # Iterate through each "title - genre" pair in the provided kwargs dictionary
+    for title, genre in kwargs.items():
+        # Check if the genre already exists on the bookshelf
+        if genre not in bookshelf:
+            # If the genre doesn't exist, add it as a key with an empty list
+            bookshelf[genre] = []
+        # Add the book title to the list of the corresponding genre on the bookshelf
+        bookshelf[genre].append(title)
+    # Create a message about the arrangement of books on the bookshelf
+    message = "Books placed on the bookshelf:\n"
+    for genre, books_in_genre in bookshelf.items():
+        message += f"{genre}: {', '.join(books_in_genre)}\n"
+
+    # Return the message as the result of the function
+    return message
+
+# Example usage of the function
+result = organize_books_on_shelf(
+    Book1="Science Fiction",
+    Book2="Mystery",
+    Book3="Science Fiction",
+    Book4="Adventure",
+    Book5="Mystery"
+)
+
+print(result)
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 37.1 - `Combination of Positional, Arbitrary and Optional Arguments`')
+print()
+
+#37.1 Combination of Positional, Arbitrary and Optional Arguments
+def process_data(name, *args, verbose=False):
+  print(f'Processing data for {name}')
+    
+# Perform some calculations on the arbitrary arguments
+  total = sum(args)
+  if len(args) == 0:
+    average=0
+
+  else:
+    average = total / len(args)
+    
+  if verbose:
+    print(f'Data: {args}')
+    print(f'Total: {total}')
+    print(f'Average: {average}')
+
+  print(f'Data for {name} was processed with result {average}\n')
+
+# Example 1: Only positional arguments
+process_data('John')
+# Example 2: Positional and arbitrary arguments
+process_data('Jane', 5, 7, 9)
+# Example 3: Positional and arbitrary arguments with specified optional argument
+process_data('Jane', 5, 7, 9, verbose=True)
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 37.2 - `Combination of Positional, Arbitrary and Optional Arguments`')
+print()
+
+#37.2 Combination of Positional, Arbitrary and Optional Arguments
+def process_data(name, *args, verbose=False):
+  print(f'Processing data for {name}')
+    
+# Perform some calculations on the arbitrary arguments
+  total = sum(args)
+  if len(args) == 0:
+    average = 0
+
+  else:
+    average = total / len(args)
+    
+  if verbose:
+    print(f'Data: {args}')
+    print(f'Total: {total}')
+    print(f'Average: {average}')
+
+  print(f'Data for {name} was processed with result {average}\n')
+
+process_data('Jane', 5, 7, 9, True)
+
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 38.1 - `Using Combinations of All Argument Types`')
+print()
+
+#38.1 Using Combinations of All Argument Types
+def combined_function(positional_arg, *args, optional_arg='Default', **kwargs):
+  print(f'Positional argument: {positional_arg}')
+
+  print('Additional positional arguments:')
+  for arg in args:
+    print(arg)
+    
+  print(f'Optional argument: {optional_arg}')
+  print('Additional keyword arguments:')
+  for key, value in kwargs.items():
+    print(f'{key}: {value}')
+
+# Example function call
+print('First function call\n')
+combined_function('Hello', 'World', 'Python', optional_arg='Custom', key1='value1', key2='value2')
+print('\nSecond function call\n')
+combined_function('Hello', 'World', 'Python', key1='value1', key2='value2')
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 38.2 - `Using Combinations of All Argument Types`')
+print()
+
+#38.2 Using Combinations of All Argument Types
+def calculate_taxi_cost(driver_name, has_discount=False, **kwargs):
+# Extract the values from kwargs
+  client_name = kwargs['client_name']
+  trip_time = kwargs['trip_time']
+  petrol_cost = kwargs['petrol_cost']
+
+# Calculate the base fare
+  base_fare = trip_time * 10
+
+# Apply discount if applicable
+  if has_discount:
+    base_fare *= 0.9
+
+# Calculate the total cost
+  total_cost = base_fare + petrol_cost
+  print(f'Total cost for {client_name} is {total_cost} payed to {driver_name}')
+
+# Examples function call
+calculate_taxi_cost('John', has_discount=True, client_name='Alice', trip_time=30, petrol_cost=20)
+calculate_taxi_cost('Alex', client_name='Max', trip_time=10, petrol_cost=30)
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 39 - `Generator Functions`')
+print()
+
+#39 Generator Functions
+def id_generator():
+    count = 1
+    while True:
+        yield f"ID_{count}"
+        count += 1
+
+# Using the generator to obtain unique identifiers
+id_gen = id_generator()
+
+# Getting the first five identifiers
+for id in range(5):
+    unique_id = next(id_gen)
+    print(unique_id)
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 40 - `Recursion`')
+print()
+
+#40 Recursion
+def sum_of_digits(n):
+    if n < 10:
+        return n
+    else:
+        return n % 10 + sum_of_digits(n // 10)
+      
+print(sum_of_digits(123456))
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 41 - `Challenge: Pyramid`')
+print()
+
+#41 Challenge: Pyramid
+def draw_pyramid(height, current_height=1):
+    if current_height > height:
+        return  # Base case: exit when the pyramid height is reached
+
+    # Recursive case: print a row for the current height
+    spaces = ' ' * (height - current_height)  # Spaces for alignment
+    stars = '*' * (2 * current_height - 1)  # Asterisks for the current row
+    print(spaces + stars)
+
+    # Recursive call for the next row
+    draw_pyramid(height, current_height + 1)
+
+# Example usage
+draw_pyramid(4)
+
+
+
+
+print()
+print()
+print('-------------------------------------------------')
+print()
+print('task 42 - `Immediately Invoked Lambda Expression`')
+print()
+
+#42 Immediately Invoked Lambda Expression
+celsius_temperature = 23
+
+# Lambda function for converting temperature 
+# from celsius_temperature variable to fahrenheit temperature 
+fahrenheit_temperature = (lambda celsius: (9/5) * celsius + 32)(celsius_temperature)
+
+# Output the result
+print(f"{celsius_temperature} degrees Celsius is equal to {fahrenheit_temperature} degrees Fahrenheit")
+
+print()
+print()
+print('-------------------------------------------------')
+print()
 print()

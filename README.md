@@ -6,4 +6,5 @@
 ![certificate](./images/data%20structures.png)
 ![certificate](./images/conditional%20statements.png)
 ![certificate](./images/loops%20tutorial.png)
+![certificate](./images/functions%20tutorial.png)
 ![certificate](./images/regex%20wizards.png)
