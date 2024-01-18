@@ -128,9 +128,14 @@ print('task 6 - `RECURSION`')
 print()
 
 #6 RECURSION
-# We are holding a prize draw among the first 50 subscribers to the YouTube channel. We have 7 prizes to give away. The question may be, how many different lists of winners can we get during the draw? For this, we will use the formula of combinations without repetitions
+# We are holding a prize draw among the first 50 subscribers 
+# to the YouTube channel. We have 7 prizes to give away. 
+# The question may be, how many different lists of winners 
+# can we get during the draw? For this, we will use the formula 
+# of combinations without repetitions
 # Cnk = n! / ((n - k)! · k!)
-# where n is the total number of people (cases) and k is the number of people who received prizes.
+# where n is the total number of people (cases) and k is the
+#  number of people who received prizes.
 def factorial(n):
     if n < 2:
         return 1
