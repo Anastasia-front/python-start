@@ -1050,6 +1050,40 @@ print(
     f"{celsius_temperature} degrees Celsius is equal to {fahrenheit_temperature} degrees Fahrenheit"
 )
 
+
+print()
+print()
+print("-------------------------------------------------")
+print()
+print("task 43 - `Trimming`")
+print()
+
+# 43 Trimming
+# Loading library
+# import numpy as np
+# print("Average age:", np.array(ages).mean())
+# List
+ages = ["43 y/o", "34 y/o", "34 y/o", "23 y/o"]
+sum=0
+for i in range(len(ages)):
+    ages[i] = int(ages[i].replace(" y/o", "").strip())
+    sum+=ages[i]
+average=sum/len(ages)
+print("Average age:",average)
+
+
+print()
+print()
+print("-------------------------------------------------")
+print()
+print("task 44 - `Formatting by Keys`")
+print()
+
+# 44 Formatting by Keys
+person = {'name': 'Alex', 'age': 23}
+pattern = "{d[name]} is {d[age]} years old"
+print(pattern.format(d = person))
+
 print()
 print()
 print("-------------------------------------------------")
