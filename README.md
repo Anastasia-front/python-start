@@ -8,4 +8,5 @@
 ![certificate](./images/loops%20tutorial.png)
 ![certificate](./images/functions%20tutorial.png)
 ![certificate](./images/regex%20wizards.png)
-![certificate](./images//string%20manipulation.png)
+![certificate](./images/string%20manipulation.png)
+![certificate](./images/git%20essentials.png)
